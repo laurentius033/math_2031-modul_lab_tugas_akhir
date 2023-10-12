@@ -157,11 +157,15 @@ print("rata rata lama: ",np.mean(nilai_akhir)) #menampilkan nilai rata rata lama
 print("rata rata baru: ",np.mean(nilai_akhir_baru)) #menampilkan nilai rata rata baru
 
 index_yang_dicari = 'A'
+index_F_dicari = 'F'
 index_lama = np.count_nonzero(indeks_prestasi == index_yang_dicari) #mencari jumlah nilai 'A' pada array lama
 index_baru = np.count_nonzero(indeks_prestasi_baru == index_yang_dicari) #mencari jumlah nilai 'A' pada array baru
-
+index_lama_F = np.count_nonzero(indeks_prestasi == index_F_dicari) #mencari jumlah nilai 'F' pada array lama
+index_baru_F = np.count_nonzero(indeks_prestasi_baru == index_F_dicari) #mencari jumlah nilai 'F' pada array baru
 print("Jumlah nilai 'A' lama: ", index_lama) 
 print("Jumlah nilai 'A' baru: ", index_baru) 
+print("Jumlah nilai 'F' lama: ", index_lama_F) 
+print("Jumlah nilai 'F' baru: ", index_baru_F) 
 print()
 
 math_2031_angkatan_20xx_baru = np.block([nim, nilai_akhir_baru,indeks_prestasi_baru]) # menggabungkan nim, nilai akhir, dan indeks prestasi menjadi 1 array
